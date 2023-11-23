@@ -5,8 +5,8 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/keys.h>
 
@@ -36,9 +36,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "balanced";
-            retro-tap;
-            hold-trigger-key-positions = <36 37 38 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 30 31 32 6 7 8>;
-            hold-trigger-on-release;
+            hold-trigger-key-positions = <36 37 38 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 30 31 32 6 7 8 33 9 10 34 39 40 41>;
         };
 
         lhrm: lhrm {
@@ -50,7 +48,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "balanced";
-            hold-trigger-key-positions = <7 6 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 27 28 29 36 37 38 3 4 5>;
+            hold-trigger-key-positions = <7 6 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 27 28 29 36 37 38 3 4 5 24 25 26 0 1 2>;
         };
 
         pinky_layer_swap: pinky_layer_swap {
@@ -111,17 +109,17 @@
             bindings = <
 &kp TAB    &kp EXCL   &kp AT         &kp HASH      &kp DLLR              &kp PRCNT                &kp LESS_THAN  &kp GREATER_THAN  &kp UP_ARROW    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BSPC
 &kp LCTRL  &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp MINUS      &kp LEFT          &kp DOWN_ARROW  &kp RIGHT         &kp BSLH           &kp GRAVE
-&kp LSHFT  &kp TAB    &kp TILDE      &kp DELETE    &kp APOS              &kp DOUBLE_QUOTES        &kp UNDER      &kp PLUS          &kp LBRC        &kp RBRC          &kp PIPE           &kp TILDE
+&kp LSHFT  &kp TAB    &kp TILDE      &kp EQUAL     &kp APOS              &kp DOUBLE_QUOTES        &kp UNDER      &kp PLUS          &kp PIPE        &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp TILDE
                                      &trans        &trans                &kp RET                  &kp SPACE      &trans            &trans
             >;
         };
 
         TRI {
             bindings = <
-&trans  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &kp F11  &trans
-&trans  &bt BT_CLR    &bl BL_TOG    &bl BL_DEC    &bl BL_INC    &trans          &trans  &trans  &trans  &trans  &kp F12  &trans
-                                    &trans        &trans        &trans          &trans  &trans  &trans
+&trans  &kp F1        &kp F2        &kp F3             &kp F4        &kp F5          &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &kp F11  &trans
+&trans  &bt BT_CLR    &kp C_POWER   &ext_power EP_TOG  &trans        &trans          &trans  &trans  &trans  &trans  &kp F12  &trans
+                                    &trans             &trans        &trans          &trans  &trans  &trans
             >;
 
             label = "Tri";
@@ -158,6 +156,15 @@
             >;
 
             label = "Left 2";
+        };
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
         };
     };
 
