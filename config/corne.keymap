@@ -76,7 +76,7 @@
             label = "Base";
             bindings = <
 &kp TAB    &kp Q          &kp W             &kp E             &kp R               &kp T        &kp Y      &kp U                &kp I              &kp O              &kp P                          &kp BSPC
-&kp LCTRL  &lhrm LCTRL A  &lhrm LEFT_WIN S  &lhrm LEFT_ALT D  &lhrm LEFT_SHIFT F  &kp G        &kp H      &rhrm RIGHT_SHIFT J  &rhrm RIGHT_ALT K  &rhrm RIGHT_WIN L  &rhrm RIGHT_CONTROL SEMICOLON  &kp SQT
+&kp LCTRL  &lhrm LCTRL A  &lhrm LEFT_WIN S  &lhrm LEFT_ALT D  &lhrm LEFT_SHIFT F  &kp G        &kp H      &rhrm RIGHT_SHIFT J  &rhrm RIGHT_ALT K  &rhrm RIGHT_WIN L  &rhrm RIGHT_CONTROL BACKSPACE  &kp SQT
 &kp LSHFT  &kp Z          &kp X             &kp C             &kp V               &kp B        &kp N      &kp M                &kp COMMA          &kp DOT            &kp FSLH                       &kp ESC
                                             &kp BACKSPACE     &mo 1               &kp ENTER    &kp SPACE  &mo 2                &kp BACKSPACE
             >;
@@ -91,10 +91,10 @@
 
             label = "Lower";
             bindings = <
-&kp TAB     &kp N1                        &kp N2        &kp N3         &kp N4     &kp N5       &kp N6     &kp N7    &kp N8         &kp N9           &kp N0        &kp BSPC
-&bt BT_CLR  &pinky_layer_swap 6 NUMBER_6  &kp N7        &kp N8         &kp N9     &kp N0       &kp INS    &kp HOME  &kp PG_UP      &kp PRINTSCREEN  &kp UNDER     &trans
-&kp LSHFT   &kp PERIOD                    &kp ASTERISK  &kp PLUS       &kp MINUS  &kp SLASH    &kp DEL    &kp END   &kp PG_DN      &kp SCROLLLOCK   &kp QUESTION  &trans
-                                                        &kp BACKSPACE  &trans     &kp RET      &kp SPACE  &trans    &kp BACKSPACE
+&kp TAB     &kp N1                  &kp N2        &kp N3         &kp N4     &kp ESCAPE    &kp N6     &kp N7    &kp N8     &kp N9           &kp N0         &kp BSPC
+&bt BT_CLR  &pinky_layer_swap 6 N5  &kp NUMBER_6  &kp N7         &kp N8     &kp TAB       &kp INS    &kp HOME  &kp PG_UP  &kp PRINTSCREEN  &kp SEMICOLON  &trans
+&kp LSHFT   &kp N9                  &kp N0        &kp MINUS      &kp EQUAL  &kp GRAVE     &kp DEL    &kp END   &kp PG_DN  &kp SCROLLLOCK   &kp QUESTION   &trans
+                                                  &kp BACKSPACE  &trans     &kp RET       &kp SPACE  &trans    &kp DEL
             >;
         };
 
@@ -107,19 +107,19 @@
 
             label = "Raise";
             bindings = <
-&kp TAB    &kp EXCL   &kp AT         &kp HASH      &kp DLLR              &kp PRCNT                &kp LESS_THAN  &kp GREATER_THAN  &kp UP_ARROW    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BSPC
-&kp LCTRL  &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp MINUS      &kp LEFT          &kp DOWN_ARROW  &kp RIGHT         &kp BSLH           &kp GRAVE
-&kp LSHFT  &kp TAB    &kp TILDE      &kp EQUAL     &kp APOS              &kp DOUBLE_QUOTES        &kp UNDER      &kp PLUS          &kp PIPE        &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp TILDE
-                                     &trans        &trans                &kp RET                  &kp SPACE      &trans            &trans
+&kp TAB    &kp EXCL              &kp AT                 &kp HASH   &kp DLLR      &kp SQT              &kp LESS_THAN  &kp GREATER_THAN  &kp UP_ARROW    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BSPC
+&kp LCTRL  &kp PERCENT           &kp CARET              &kp AMPS   &kp ASTERISK  &kp DOUBLE_QUOTES    &kp HOME       &kp LEFT          &kp DOWN_ARROW  &kp RIGHT         &kp END            &kp GRAVE
+&kp LSHFT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER  &kp EQUAL     &kp COLON            &kp PAGE_UP    &kp PAGE_DOWN     &kp PIPE        &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp TILDE
+                                                        &trans     &trans        &kp RET              &kp SPACE      &trans            &trans
             >;
         };
 
         TRI {
             bindings = <
-&trans  &kp F1        &kp F2        &kp F3             &kp F4        &kp F5          &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &kp F11  &trans
-&trans  &bt BT_CLR    &kp C_POWER   &ext_power EP_TOG  &trans        &trans          &trans  &trans  &trans  &trans  &kp F12  &trans
-                                    &trans             &trans        &trans          &trans  &trans  &trans
+&trans  &kp F1        &kp F2        &kp F3             &kp F4        &kp F5          &kp F1  &kp F2   &kp F3   &kp F4   &kp F10  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4    &kp F5  &kp F6   &kp F7   &kp F8   &kp F11  &trans
+&trans  &bt BT_CLR    &kp C_POWER   &ext_power EP_TOG  &trans        &trans          &kp F9  &kp F10  &kp F11  &kp F12  &kp F12  &trans
+                                    &trans             &trans        &trans          &trans  &trans   &trans
             >;
 
             label = "Tri";
@@ -127,10 +127,10 @@
 
         Gaming {
             bindings = <
-&trans  &kp TAB    &kp Q  &kp W       &kp E  &kp R        &trans  &trans  &trans  &trans  &tog 0  &trans
-&trans  &kp LSHFT  &kp A  &kp S       &kp D  &kp F        &trans  &trans  &trans  &trans  &to 0   &trans
-&trans  &kp LCTRL  &kp Z  &kp X       &kp C  &kp V        &trans  &trans  &trans  &trans  &trans  &trans
-                          &kp RETURN  &mo 5  &kp SPACE    &trans  &trans  &trans
+&trans      &kp TAB    &kp Q  &kp W       &kp E  &kp R        &kp T   &kp Y   &kp U   &kp I   &tog 0  &trans
+&trans      &kp LSHFT  &kp A  &kp S       &kp D  &kp F        &kp G   &kp H   &kp J   &kp K   &to 0   &trans
+&kp ESCAPE  &kp LCTRL  &kp Z  &kp X       &kp C  &kp V        &kp B   &kp N   &kp M   &trans  &trans  &trans
+                              &kp RETURN  &mo 5  &kp SPACE    &trans  &trans  &trans
             >;
 
             label = "Game";
@@ -138,10 +138,10 @@
 
         Gaming_2 {
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp J   &kp K   &kp I   &kp M     &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &kp N1      &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N6      &kp N7  &kp N8  &kp N9  &kp N0    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp ESCAPE  &kp J   &kp K   &kp I   &kp M     &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
             label = "Game 2";
